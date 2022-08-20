@@ -16,7 +16,7 @@ SRCS	=	$(addsuffix .c, \
 		$(addprefix $(SRCDIR)$(MAP)ft_, \
 			)\
 		$(addprefix $(SRCDIR)$(MLXUTILS)ft_, \
-			mlx_new_img mlx_pixel_put draw_line))
+			mlx_new_img mlx_pixel_put draw_line put_polygon))
 
 OBJS	=	$(subst .c,.o,$(SRCS))
 

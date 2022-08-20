@@ -5,6 +5,7 @@
 # include <unistd.h>
 # include <math.h>
 # include <stdlib.h>
+
 typedef struct	s_img
 {
 	void	*img;
@@ -37,6 +38,8 @@ typedef struct	s_line
 void	ft_mlx_pixel_put(t_img *img, int x, int y, int color);
 t_img*	ft_mlx_new_image(void* mlx, int x_size, int y_size);
 void	ft_draw_line(t_img *img, t_cord c1, t_cord c2, int color);
+void	ft_put_polygon(t_img *img, t_cord *cords, int length, int color);
+
 int		ft_round(long double nbr);
 
 #endif
