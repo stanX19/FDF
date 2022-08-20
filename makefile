@@ -12,11 +12,11 @@ SRCS	=	$(addsuffix .c, \
 		$(addprefix $(SRCDIR)$(SHARED)ft_, \
 			)\
 		$(addprefix $(SRCDIR)$(UTILS)ft_, \
-			)\
+			round)\
 		$(addprefix $(SRCDIR)$(MAP)ft_, \
 			)\
 		$(addprefix $(SRCDIR)$(MLXUTILS)ft_, \
-			))
+			mlx_new_img mlx_pixel_put draw_line))
 
 OBJS	=	$(subst .c,.o,$(SRCS))
 
@@ -26,8 +26,8 @@ RM			=	rm -rf
 TESTDIR		= so_long_tester
 TESTGIT		= https://github.com/augustobecker/so_long_tester.git
 MLX_LINUX	= -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz
-MLX_MACOS	= -lmlx -I. -framework OpenGL -framework AppKit -o $(NAME)
-NAME		= so_long
+MLX_MACOS	= -lmlx -I. -framework OpenGL -framework AppKit
+NAME		= fdf
 
 run: re
 	./$(NAME) data/map1
